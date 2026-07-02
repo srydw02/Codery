@@ -18,6 +18,21 @@
     #f8fbff;
 }
 
+
+.cd-back-global:hover {
+  background: #f8fbff;
+  transform: translateX(-5px); /* Efek geser sedikit ke kiri saat di-hover */
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  .cd-back-global {
+    margin: 20px 6% 0;
+  }
+}
+
 .cd-detail-content,
 .cd-detail-card {
   border: 1px solid var(--border);

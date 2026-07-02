@@ -348,3 +348,60 @@ document.getElementById("courseMentor").innerHTML = `
     <p>${course.mentor.bio}</p>
   </div>
 `;
+
+// ==========================================
+// LOGIKA TOMBOL IKUTI KELAS & AKSES MATERI
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const enrollBtn = document.querySelector(".cd-enroll-btn");
+
+  if (enrollBtn) {
+    // 1. Cek apakah ada data user yang sedang login di localStorage
+    const loggedUser = JSON.parse(localStorage.getItem("coderyLoggedInUser"));
+    
+    // 2. Mengambil ID kelas dari URL (contoh: ?course=html-css)
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentCourseId = urlParams.get("course") || "html-css"; 
+
+    if (loggedUser) {
+      // JIKA USER SUDAH LOGIN
+      
+      const storageKey = `enrolledCourses_${loggedUser.email}`;
+      let enrolledCourses = JSON.parse(localStorage.getItem(storageKey)) || [];
+      const isEnrolled = enrolledCourses.includes(currentCourseId);
+
+      if (isEnrolled) {
+        // Jika sudah pernah klik "Ikuti Kelas" sebelumnya
+        enrollBtn.textContent = "Lanjutkan Belajar ➔";
+        enrollBtn.style.background = "#16a34a"; // Ubah warna jadi hijau (feedback visual)
+        enrollBtn.style.boxShadow = "none";
+        enrollBtn.href = `materi.html?course=${currentCourseId}`; 
+        
+      } else {
+        // Jika sudah login tapi BARU PERTAMA KALI membuka kelas ini
+        enrollBtn.textContent = "Ikuti Kelas";
+        enrollBtn.href = "#"; // Mencegah loncat ke halaman lain secara default
+
+        // Eksekusi saat tombol Ikuti Kelas diklik
+        enrollBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // Simpan ID kelas ke dalam daftar kelas milik user ini
+          enrolledCourses.push(currentCourseId);
+          localStorage.setItem(storageKey, JSON.stringify(enrolledCourses));
+
+          const courseTitle = document.getElementById("courseTitle").textContent;
+          alert(`Berhasil! ${loggedUser.username}, Anda sekarang terdaftar di kelas: ${courseTitle}. Mari mulai belajar!`);
+
+          // Langsung arahkan user ke halaman materi
+          window.location.href = `materi.html?course=${currentCourseId}`;
+        });
+      }
+    } else {
+      // JIKA USER BELUM LOGIN
+      // Pastikan tombol tetap "Daftar Sekarang" dan mengarah ke login
+      enrollBtn.textContent = "Daftar Sekarang";
+      enrollBtn.href = "login.html"; 
+    }
+  }
+});
