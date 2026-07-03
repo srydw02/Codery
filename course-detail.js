@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // JIKA USER BELUM LOGIN
       // Pastikan tombol tetap "Daftar Sekarang" dan mengarah ke login
       enrollBtn.textContent = "Daftar Sekarang";
-      enrollBtn.href = "login.html"; 
+      enrollBtn.href = "Progres1_250103090/login.html"; 
     }
   }
 });
