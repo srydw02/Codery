@@ -375,7 +375,7 @@ document.addEventListener("DOMContentLoaded", () => {
         enrollBtn.textContent = "Lanjutkan Belajar ➔";
         enrollBtn.style.background = "#16a34a"; // Ubah warna jadi hijau (feedback visual)
         enrollBtn.style.boxShadow = "none";
-        enrollBtn.href = `materi.html?course=${currentCourseId}`; 
+        enrollBtn.href = `../materi.html?course=${currentCourseId}`; 
         
       } else {
         // Jika sudah login tapi BARU PERTAMA KALI membuka kelas ini
@@ -394,14 +394,14 @@ document.addEventListener("DOMContentLoaded", () => {
           alert(`Berhasil! ${loggedUser.username}, Anda sekarang terdaftar di kelas: ${courseTitle}. Mari mulai belajar!`);
 
           // Langsung arahkan user ke halaman materi
-          window.location.href = `materi.html?course=${currentCourseId}`;
+          window.location.href = `../materi.html?course=${currentCourseId}`;
         });
       }
     } else {
       // JIKA USER BELUM LOGIN
       // Pastikan tombol tetap "Daftar Sekarang" dan mengarah ke login
       enrollBtn.textContent = "Daftar Sekarang";
-      enrollBtn.href = "Progres1_250103090/login.html"; 
+      enrollBtn.href = "../Progres1_250103090/login.html"; 
     }
   }
 });

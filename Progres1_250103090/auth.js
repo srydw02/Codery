@@ -193,10 +193,11 @@ logoutBtn.addEventListener("click", () => {
     // Deteksi user lagi di folder mana
     const path = window.location.href;
     
-    if (path.includes("Progres1_250103090")) {
-        window.location.href = "beranda.html";
-    } else if (path.includes("Progres1_250103083")) {
+    // Tambahkan || path.includes("084") di sini
+    if (path.includes("Progres1_250103083") || path.includes("Progres1_250103084")) {
         window.location.href = "../Progres1_250103090/beranda.html";
+    } else if (path.includes("Progres1_250103090")) {
+        window.location.href = "beranda.html";
     } else {
         window.location.href = "Progres1_250103090/beranda.html";
     }
