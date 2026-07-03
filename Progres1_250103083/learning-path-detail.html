@@ -12,7 +12,7 @@
 
     <link
       rel="stylesheet"
-      href="../css/global.css"
+      href="../global.css"
     />
 
     <style>
@@ -270,7 +270,7 @@
 
     {
         title: "Materi Machine Learning",
-        link: "materi/ml.html",
+        link: "../materi.html",
     },
     ],
         },
@@ -302,16 +302,13 @@
 
     {
         title: "Materi Kubernetes",
-        link: "materi/kubernetes.html",
+        link: "../materi.html",
     },
     ],
         },
       };
 
-      const key =
-        new URLSearchParams(
-          window.location.search
-        ).get("path");
+      const key = new URLSearchParams(window.location.search).get("path") || "frontend";
 
       const data = paths[key];
 

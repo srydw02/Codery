@@ -186,20 +186,21 @@ if (finalCta) {
   );
 
 if (logoutBtn) {
-  logoutBtn.addEventListener(
-    "click",
-    () => {
-      localStorage.removeItem(
-        "coderyLoggedInUser",
-      );
-
-      alert(
-        "Logout berhasil",
-      );
-
-      window.location.href =
-        "beranda.html";
-    },
-  );
+logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("coderyLoggedInUser");
+    alert("Logout berhasil");
+    
+    // Deteksi user lagi di folder mana
+    const path = window.location.href;
+    
+    // Tambahkan || path.includes("084") di sini
+    if (path.includes("Progres1_250103083") || path.includes("Progres1_250103084")) {
+        window.location.href = "../Progres1_250103090/beranda.html";
+    } else if (path.includes("Progres1_250103090")) {
+        window.location.href = "beranda.html";
+    } else {
+        window.location.href = "Progres1_250103090/beranda.html";
+    }
+});
 }}
 });

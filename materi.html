@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codery - Materi Belum Tersedia</title>
+    
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="navbar-footer.css" />
+
+    <style>
+      /* CSS Khusus Halaman Placeholder / WIP (Work in Progress) */
+      .cd-wip-section {
+        min-height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 20px;
+        background: radial-gradient(circle at top, rgba(37, 99, 235, 0.05), transparent 50%), #f8fbff;
+      }
+
+      .cd-wip-icon {
+        font-size: 80px;
+        margin-bottom: 24px;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .cd-wip-title {
+        font-size: 42px;
+        color: var(--text);
+        margin-bottom: 16px;
+        letter-spacing: -1px;
+      }
+
+      .cd-wip-desc {
+        font-size: 18px;
+        color: var(--muted);
+        max-width: 540px;
+        line-height: 1.8;
+        margin-bottom: 36px;
+      }
+
+      .cd-wip-btn {
+        display: inline-block;
+        padding: 16px 32px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--primary), var(--purple));
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+        transition: 0.3s ease;
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+      }
+
+      .cd-wip-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 35px rgba(37, 99, 235, 0.3);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="cd-navbar">
+      <a href="Progres1_250103090/beranda.html" class="cd-logo">
+        <div class="cd-logo-mark"><span>&lt;/&gt;</span></div>
+        <div class="cd-logo-text"><strong>Codery</strong></div>
+      </a>
+      <nav class="cd-nav-menu">
+        <a href="Progres1_250103090/beranda.html">Beranda</a>
+        <a href="Progres1_250103084/courses.html">Kelas</a>
+        <a href="Progres1_250103083/learning-path.html">Learning Path</a>
+        <a href="Progres1_250103083/mentors.html">Mentor</a>
+        <a href="Progres1_250103084/about.html">Tentang</a>
+      </nav>
+      <div class="cd-nav-actions" id="navActions">
+        <a href="Progres1_250103090/login.html" class="cd-register-btn">Daftar/Masuk</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="cd-wip-section">
+        <div class="cd-wip-icon">🚧</div>
+        <h1 class="cd-wip-title">Fitur Sedang Dikembangkan</h1>
+        <p class="cd-wip-desc">
+          Mohon maaf, halaman materi untuk kelas ini sedang dalam tahap penyusunan oleh para mentor kami. Silakan kembali lagi nanti untuk mulai belajar!
+        </p>
+        <a href="Progres1_250103084/courses.html" class="cd-wip-btn">← Kembali ke Daftar Kelas</a>
+      </section>
+    </main>
+
+    <footer class="cd-footer">
+      <div class="cd-footer-top">
+        <div class="cd-footer-brand">
+          <h3>Codery</h3>
+          <p>
+            Platform belajar berbasis project yang membantu learner membangun
+            skill, portfolio, dan karier teknologi.
+          </p>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Menu</h4>
+          <a href="Progres1_250103090/beranda.html">Beranda</a>
+          <a href="Progres1_250103084/courses.html">Kelas</a>
+          <a href="Progres1_250103083/learning-path.html">Learning Path</a>
+          <a href="Progres1_250103083/mentors.html">Mentor</a>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Program</h4>
+          <a href="#">Frontend</a>
+          <a href="#">Data Analyst</a>
+          <a href="#">Cyber Security</a>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Kontak</h4>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Email</a>
+        </div>
+      </div>
+      <div class="cd-footer-bottom">© 2026 Codery. All rights reserved.</div>
+    </footer>
+
+    <script src="Progres1_250103090/auth.js"></script>
+  </body>
+</html>
