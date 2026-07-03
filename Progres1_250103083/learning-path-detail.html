@@ -308,10 +308,7 @@
         },
       };
 
-      const key =
-        new URLSearchParams(
-          window.location.search
-        ).get("path");
+      const key = new URLSearchParams(window.location.search).get("path") || "frontend";
 
       const data = paths[key];
 
