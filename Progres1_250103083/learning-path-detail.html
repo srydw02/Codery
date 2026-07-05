@@ -3,94 +3,65 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Detail Learning Path</title>
 
-    <link
-      rel="stylesheet"
-      href="../global.css"
-    />
+    <link rel="stylesheet" href="../global.css" />
 
     <style>
       body {
         background: #f8fbff;
-
         padding: 50px;
       }
 
       .cd-detail {
         max-width: 1000px;
-
         margin: auto;
-
         background: white;
-
         border-radius: 24px;
-
         padding: 40px;
-
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
       }
 
       .cd-title {
         font-size: 42px;
-
         margin-bottom: 12px;
       }
 
       .cd-desc {
         color: #64748b;
-
         line-height: 1.8;
-
         margin-bottom: 30px;
       }
 
       .cd-meta {
         display: flex;
-
         gap: 24px;
-
         margin-bottom: 30px;
-
         flex-wrap: wrap;
       }
 
       .cd-roadmap {
         display: flex;
-
         flex-wrap: wrap;
-
         gap: 14px;
       }
 
       .cd-roadmap span {
         padding: 14px 22px;
-
         background: #eef2ff;
-
         border-radius: 999px;
-
         font-weight: 700;
       }
 
       .cd-back {
         display: inline-block;
-
         margin-top: 40px;
-
         text-decoration: none;
-
         padding: 14px 22px;
-
         border-radius: 14px;
-
         background: #2563eb;
-
         color: white;
       }
     </style>
@@ -98,288 +69,19 @@
 
   <body>
     <div class="cd-detail">
-      <h1
-        class="cd-title"
-        id="title"
-      ></h1>
+      <h1 class="cd-title" id="title"></h1>
 
-      <p
-        class="cd-desc"
-        id="desc"
-      ></p>
+      <p class="cd-desc" id="desc"></p>
 
-      <div
-        class="cd-meta"
-        id="meta"
-      ></div>
+      <div class="cd-meta" id="meta"></div>
 
       <h2>Roadmap Belajar</h2>
 
-      <div
-        class="cd-roadmap"
-        id="roadmap"
-      ></div>
+      <div class="cd-roadmap" id="roadmap"></div>
       <div id="materials"></div>
 
-      <a
-        href="learning-path.html"
-        class="cd-back"
-      >
-        ← Kembali
-      </a>
+      <a href="learning-path.html" class="cd-back"> ← Kembali </a>
     </div>
-
-    <script>
-      const paths = {
-        frontend: {
-          title: "💻 Frontend Developer",
-
-          desc:
-            "Belajar membangun website modern dari HTML hingga React.",
-
-          meta: [
-            "📚 4 Kelas",
-            "⏳ 12 Minggu",
-            "📊 850+ Learner",
-          ],
-
-          roadmap: [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Portfolio Project",
-          ],
-          materials: [
-        {
-         title: "Materi HTML Dasar",
-         link: "https://youtu.be/0oA1Z6UKM5M?si=QzSCV5zB3P4gNk5e",
-        },
-
-        {
-         title: "Materi CSS Dasar",
-         link: "https://youtu.be/V-DD30lGAL0?si=-OahqyGOxY01dQPB",
-        },
-
-        {
-          title: "Materi JavaScript",
-          link: "https://youtu.be/sNLadea-tLU?si=pWRtBX2GjHBfPNEB",
-        },
-        ],
-        },
-
-        data: {
-          title: "📊 Data Analyst",
-
-          desc:
-            "Belajar analisis data dari dasar hingga visualisasi.",
-
-          meta: [
-            "📚 4 Kelas",
-            "⏳ 10 Minggu",
-            "📊 720+ Learner",
-          ],
-
-          roadmap: [
-            "Excel",
-            "SQL",
-            "Python",
-            "Dashboard",
-            "Data Storytelling",
-          ],
-          materials: [
-    {
-      title: "Materi Excel",
-      link: "https://youtu.be/6WgvzCU3TI8?si=YAB-TOTGvXNf4SyGk",
-    },
-
-    {
-      title: "Materi SQL",
-      link: "https://youtu.be/DPGMBa0srPA?si=FkmL8ZUp4yyyMGiG",
-    },
-
-    {
-      title: "Materi Python Data",
-      link: "https://youtu.be/poZtdyC24P4?si=t5C0SM3r_VhM2URv",
-    },
-  ],
-          
-        },
-
-        cyber: {
-          title: "🛡️ Cyber Security",
-
-          desc:
-            "Belajar keamanan sistem dan penetration testing.",
-
-          meta: [
-            "📚 5 Kelas",
-            "⏳ 14 Minggu",
-            "📊 410+ Learner",
-          ],
-
-          roadmap: [
-            "Networking",
-            "Linux",
-            "Web Security",
-            "Pentesting",
-            "Bug Bounty",
-          ],
-           materials: [
-    {
-        title: "Materi Networking",
-        link: "https://youtu.be/IvBfxSJWx6A?si=aiTYDT1BNDQLVFh0",
-    },
-
-    {
-        title: "Materi Linux",
-        link: "https://youtu.be/p0UBn2J1y-Y?si=e9AGdkH9h6fVuvJo",
-    },
-
-    {
-        title: "Materi Pentesting",
-        link: "https://youtu.be/eMjoxaTpOgM?si=2MRM1eSBKoclSSe6",
-    },
-     ],
-        },
-
-        ai: {
-          title: "🤖 AI Engineer",
-
-          desc:
-            "Belajar Machine Learning hingga project AI.",
-
-          meta: [
-            "📚 5 Kelas",
-            "⏳ 16 Minggu",
-            "📊 500+ Learner",
-          ],
-
-          roadmap: [
-            "Python",
-            "Data Science",
-            "Machine Learning",
-            "Deep Learning",
-            "AI Project",
-          ],
-          materials: [
-    {
-        title: "Materi Python AI",
-        link: "https://youtu.be/oQu5uowvQOo?si=nSgVVl0UpMABrcBX",
-    },
-
-    {
-        title: "Materi Machine Learning",
-        link: "../materi.html",
-    },
-    ],
-        },
-
-        devops: {
-          title: "⚙️ DevOps Engineer",
-
-          desc:
-            "Belajar deployment modern dan cloud.",
-
-          meta: [
-            "📚 4 Kelas",
-            "⏳ 12 Minggu",
-            "📊 320+ Learner",
-          ],
-
-          roadmap: [
-            "Linux",
-            "Docker",
-            "Kubernetes",
-            "CI/CD",
-            "Cloud",
-          ],
-          materials: [
-    {
-        title: "Materi Docker",
-        link: "https://youtu.be/MtkXWErov50?si=2fNUfHNJu2GjvBtk",
-    },
-
-    {
-        title: "Materi Kubernetes",
-        link: "../materi.html",
-    },
-    ],
-        },
-      };
-
-      const key = new URLSearchParams(window.location.search).get("path") || "frontend";
-
-      const data = paths[key];
-
-      if (data) {
-  title.textContent =
-    data.title;
-
-  desc.textContent =
-    data.desc;
-
-  meta.innerHTML =
-    data.meta
-      .map(
-        (item) =>
-          `<span>${item}</span>`
-      )
-      .join("");
-
-  roadmap.innerHTML =
-    data.roadmap
-      .map(
-        (item) =>
-          `<span>${item}</span>`
-      )
-      .join("");
-
-  const loggedUser =
-    JSON.parse(
-      localStorage.getItem(
-        "coderyLoggedInUser"
-      )
-    );
-
-  const materialArea =
-  document.getElementById(
-    "materials"
-  );
-
-if (
-  loggedUser &&
-  data.materials
-) {
-  materialArea.innerHTML =
-  `
-    <h2 style="margin-top:40px">
-      Materi
-    </h2>
-
-    ${
-      data.materials
-      .map(
-        (item) =>
-        `
-        <a
-          href="${item.link}"
-          target="_blank"
-          class="cd-back"
-          style="
-            display:block;
-            margin-bottom:12px;
-          "
-        >
-          📘 ${item.title}
-        </a>
-        `
-      )
-      .join("")
-    }
-  `;
-}
-}
-    </script>
+    <script src="learning-path-detail.js"></script>
   </body>
 </html>

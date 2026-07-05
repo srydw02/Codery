@@ -269,50 +269,6 @@
       <div class="cd-footer-bottom">© 2026 Codery. All rights reserved.</div>
     </footer>
     <script src="../Progres1_250103090/auth.js"></script>
-    <script>
-const buttons =
-  document.querySelectorAll(".cd-lp-chip");
-
-const cards =
-  document.querySelectorAll(".cd-lp-card");
-
-const empty =
-  document.getElementById("lpEmpty");
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-
-    buttons.forEach((btn) =>
-      btn.classList.remove("active")
-    );
-
-    button.classList.add("active");
-
-    const filter =
-      button.dataset.filter;
-
-    let total = 0;
-
-    cards.forEach((card) => {
-
-      if (
-        filter === "semua" ||
-        card.dataset.category === filter
-      ) {
-        card.style.display = "block";
-        total++;
-      } else {
-        card.style.display = "none";
-      }
-
-    });
-
-    empty.style.display =
-      total === 0
-        ? "block"
-        : "none";
-  });
-});
-</script>
+    <script src="learning-path.js"></script>
   </body>
 </html>
